@@ -1,0 +1,89 @@
+body {
+overflow-y: auto;
+overflow-x :auto;
+}
+
+#background {
+width: 100%;
+left: 0px;
+top: 0px;
+position: absolute;
+z-index: 0;
+}
+
+#content {
+z-index: 2;
+position: absolute;
+}
+
+#background img { width: 100%; }
+
+#tl{
+	position:absolute;
+	
+	top:-20%;
+	left:-15%;
+	-webkit-transform: rotate(10deg);
+}
+
+#br{
+	position:absolute;
+	height:50px;
+	top:87%;
+	left:100%;
+	-webkit-transform: rotate(10deg);
+}
+
+.content{
+	
+			 /* BORDER RADIUS */
+	 
+	 width: 380px;
+	 height: 145px;
+	 line-height: 45px;
+	 color: white;
+	 text-decoration: none;
+	 font-size: 20px;
+	 font-family: helvetica, arial;
+	 display: block;	
+	 
+	 -moz-border-radius: 10px;
+	 -webkit-border-radius: 10px;
+	 border-radius: 10px;
+
+	 border: 1px solid #000000;
+	 border-top: 1px solid #000000;
+
+	-moz-box-shadow: 0 1px 3px black;
+	 -webkit-box-shadow: 0 1px 3px black;
+	 box-shadow: 0 1px 3px black; 
+	 background: rgba(0, 0, 0, 0.5);
+}
+
+#comment1{
+	
+	position: absolute;
+	 top:15%;
+	left:10%;
+	
+}
+
+#comment2{
+	position: absolute;
+	 top:30%;
+	left:60%;
+	
+}
+
+.text{
+	margin-left:15px;
+	position:relative;
+	text-align:left;
+	font-weight: bold;
+	
+}
+
+.text i{
+	position:relative;
+	text-align:right;
+}
