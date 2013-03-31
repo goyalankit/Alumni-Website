@@ -1,156 +1,283 @@
-<!doctype html>
-<html lang="en">
+<?php
+session_start();
+
+require_once("connection_open.php");
+require_once("EntryManagement.php");
+ 
+ $logged = 'n';
+if(!isset($_SESSION['username'])){
+ $logged = 'n';
+}
+else{
+	$details=getProfileInformation($_SESSION['username'], $dbh);	  
+	$logged = 'y';
+}
+
+
+?>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+
+
+<html>
+
+
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Welcome to OpenShift</title>
-  <style>
-  html { 
-  background: black; 
-  }
-  body {
-    background: #333;
-    background: -webkit-linear-gradient(top, black, #666);
-    background: -o-linear-gradient(top, black, #666);
-    background: -moz-linear-gradient(top, black, #666);
-    background: linear-gradient(top, black, #666);
-    color: white;
-    font-family: "Helvetica Neue",Helvetica,"Liberation Sans",Arial,sans-serif;
-    width: 40em;
-    margin: 0 auto;
-    padding: 3em;
-  }
-  a {
-    color: white;
-  }
 
-  h1 {
-    text-transform: capitalize;
-    -moz-text-shadow: -1px -1px 0 black;
-    -webkit-text-shadow: 2px 2px 2px black;
-    text-shadow: -1px -1px 0 black;
-    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
-    background: #CC0000;
-    width: 22.5em;
-    margin: 1em -2em;
-    padding: .3em 0 .3em 1.5em;
-    position: relative;
-  }
-  h1:before {
-    content: '';
-    width: 0;
-    height: 0;
-    border: .5em solid #91010B;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-    position: absolute;
-    bottom: -1em;
-    left: 0;
-    z-index: -1000;
-  }
-  h1:after {
-    content: '';
-    width: 0;
-    height: 0;
-    border: .5em solid #91010B;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    position: absolute;
-    bottom: -1em;
-    right: 0;
-    z-index: -1000;
-  }
-  h2 { 
-    margin: 2em 0 .5em;
-    border-bottom: 1px solid #999;
-  }
 
-  pre {
-    background: black;
-    padding: 1em 0 0;
-    -webkit-border-radius: 1em;
-    -moz-border-radius: 1em;
-    border-radius: 1em;
-    color: #9cf;
-  }
 
-  ul { 
-    margin: 0; 
-    padding: 0;
-  }
-  li {
-    list-style-type: none;
-    padding: .5em 0;
-  }
 
-  .brand {
-    display: block;
-    text-decoration: none;
-  }
-  .brand .brand-image {
-    float: left;
-    border: none;
-  }
-  .brand .brand-text {
-    float: left;
-    font-size: 24px;
-    line-height: 24px;
-    padding: 4px 0;
-    color: white;
-    text-transform: uppercase;
-  }
-  .brand:hover,
-  .brand:active {
-    text-decoration: underline;
-  }
+<script src="script/mootools-1.3.1-core.js"></script>
+	<script src="script/mootools-1.3.1.1-more.js"></script>
+	<script src="script/slideshow.js"></script>
 
-  .brand:before,
-  .brand:after {
-    content: ' ';
-    display: table;
-  }
-  .brand:after {
-    clear: both;
-  }
-  </style>
+	<link type="text/css" rel="stylesheet" href="style/general.css" /> 
+<link type="text/css" rel="stylesheet" href="style/rocket.css" />
+
+
+<style type="text/css">
+
+* { margin, padding: 0; }
+
+#slog{
+	
+	position: absolute;
+	left:80px;
+	display:inline;
+}
+#nlog{
+	position: absolute;
+	left:465px;
+	display:inline;
+}
+
+#slog a {text-decoration:none;
+	font-size: 22px; color: #555; text-shadow: 0px 2px 3px #171717;
+	}
+#blink1, #blink2, #blink3 {
+text-decoration:none;
+}
+
+#blink1:hover #sbox{ 
+	background:#FF0000;
+}
+#blink2:hover #slog{ 
+	background:#FFFF99;
+}
+#blink3:hover #nlog{ 
+	background:#99FFFF;
+}
+#sbox{
+	text-decoration:none;
+	position: absolute;
+	left:270px;
+	display:inline;
+}
+
+#weCreate {
+	background: #474747 url(images/bg.png);
+	margin: 70px;
+	width:640px;
+	height: 500px;
+	position:relative;
+	top:-120px;
+	left:200px;
+	z-index:4;
+}
+pre {
+	width: 70px; margin: 0 auto; background: #222; padding: 20px;
+	font-size: 18px; color: #555; text-shadow: 0px 2px 3px #171717;
+	display:inline;
+	-webkit-box-shadow: 0px 2px 3px #555;
+	-moz-box-shadow: 0px 2px 3px #555;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 12px;
+	
+}
+
+
+h1 {
+	display: block; text-decoration: none;
+	font: 50px Helvetica, Arial, Sans-Serif; letter-spacing: .5px;  
+	text-align: center;
+	color: #999; text-shadow: 0px 3px 8px #2a2a2a;
+ }
+ 	h1 a:hover {
+ 		color: #a0a0a0; text-shadow: 0px 5px 8px #2a2a2a;
+ 	}
+ 
+ h2 {
+ 	
+	font: 40px Tahoma, Helvetica, Arial, Sans-Serif;
+	text-align: center;
+	
+	color: #222; text-shadow: 0px 2px 3px #555;
+}
+
+#share {
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px rgb(154,0,0), 0 0 30px rgb(154,0,0), 0 0 40px rgb(154,0,0), 0 0 50px rgb(154,0,0), 0 0 75px rgb(154,0,0);
+        letter-spacing: 5px;
+        text-align: center;
+        font: 40px 'MisoRegular';
+}
+
+#sidetext{
+
+        color: #d7ceb2;
+        text-shadow: 3px 3px 0px #2c2e38, 5px 5px 0px #5c5f72;
+        font: 80px 'BazarMedium';
+        letter-spacing: 10px;
+}
+/*
+#share{
+	
+	font: 40px Tahoma, Helvetica, Arial, Sans-Serif;
+	text-align: center;
+	
+	color: #E8E8E8; text-shadow: 0px 2px 3px #555;
+}
+*/
+
+<style type="text/css">
+
+#addim{
+	display: block;
+	float:left;
+	position:absolute;
+	left:370px;
+	font-size: 12px;	
+}
+#adminim{
+	display: block;
+	float:left;
+	position:absolute;
+	left:570px;
+	font-size: 12px;
+	color:#000000;	
+}
+#infoim
+{
+	display: block;
+	float:left;
+	position:absolute;
+	left:770px;
+	font-size: 12px;
+	color:#000000;	
+}
+
+#sidebar{
+	position:relative;
+	left: 15px;
+width: 240px;
+float:left;
+height: 870px;
+top: -20px;
+background-color:rgb(154,0,0);
+	z-index: 100;
+}
+
+hr{
+	color: white;	
+	
+}
+
+
+</style>
+
+
+
+
+<link rel="stylesheet" href="style/slideshow.css">
+<link rel="stylesheet" href="style/button.css">
+	<script type="text/javascript" src="script/general.js"></script>
+	<script src="script/slideshow.flash.js"></script>
+	<script>
+		window.addEvent('domready', function(){
+			var data = { '1.jpg': { caption: '1' }, '2.jpg': { caption: '2' }, '3.jpg': { caption: '3' }, '4.jpg': { caption: '4' }};
+			new Slideshow.Flash('flash', data, { color: ['tomato', 'palegreen', 'orangered', 'aquamarine'], height: 350, hu: 'images/', width: 640 });
+		});
+		
+		function pageScroll() {
+    	window.scrollBy(0,10); // horizontal and vertical scroll increments
+    	scrolldelay = setTimeout('pageScroll()',90); // scrolls every 100 milliseconds
+}
+
+function stopScroll() {
+    	clearTimeout(scrolldelay);
+}
+
+	</script>
+
+	
+
+	<title>IIT Rajasthan Alumni Database</title>
+
+	<meta name="description" content="" />
+
 </head>
+
 <body>
-  <a href="http://openshift.com" class="brand">
-    <img class="brand-image"
-      alt="OpenShift logo"
-      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAgCAYAAABU1PscAAAAAXNSR0IArs4c6QAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAARHgAAER4B27UUrQAABUhJREFUWMPFWFlsVGUU/s5/70zbaSltA7RQpJ2lC9CFkQkWIgSJxkAhRA0JCYFq4hPG6JsoGKNCtPigxqhvGlPAuGIaE4igNaElbIW2yNL2tkOtTYGWCqWF2e79fCh7p1Bmpnge/3vuOef7z/nPJiTxMHS6pMRuu6YqFNTTAJYSyAU4GZB0AH2AGCANAfc5Qrba6T3HrmECScYLwCioSIcV2AjidQDZ45Q/LJRaWrLV03X89P8GwHB5XwG4DcDkGPWEBKimNrzN094efGQAzjm9GWHFr4R4LiHKgFaSL3r8zYcmHEBbkW+KFo7UEyhKsNeHlMgyV8eJo4kQpqId9ub6HCoc+XWcxl8lcBTATwDax8GfZtHa054/f/bNg8ZcnyOhHjBc834E8MJ9/vML8aYZQX1hd1PP3WFXkhMRfYkIlpOoGomc0WRRTnch+XAQWG2KTNJNLbuy68C/cQMwXOWrAKkdgz8A8kMdg9X5fn/gQcI7POXLaMk3AGbe/P8SbF0D1KcGRGXpIJJpIQkWBHhnsf/Ie3GF0DmnMxmQT8bg7RellXr8ze+Ox3gAcBvNf+iUUhH5FODLSvScAerDGpiVxTAyGUYKzICA34nCwbhDyHB7N4L8PAofhVzh9jfvjffR/ZZTnupIsR8G0C9EjW7Tfnii/dBgrPL0u83kmjHy33Z3Z/zG97uKi7xpWA8GHZpE1mcZRne8MvXblfbxqQAWR+Fp+mdW5hZPjAqu5JVlhrTwOgrXi2ABbjjchF4FYGvi0qhprgagjYod4OeldXWRWBUEtdBjEH4mwIJ7vF2V4Dqgot0+NEFdPAqmdZ5tAXA8Slx6LrpKsxMHQJge5ft1v0oe2OOu+PZ39+LCOFqImqiXo8JzAeBkXlnmnoKK9LgACJl2R9gELsHW1saUwKCpnbIoa8UMTokVgGXJmSjHkfNWUlWDy9d6USVdyoiEF8b1iElxQKHuPG1D/bCtVEBhCiykMQQFgCK2mN2sSx+tkdcbhGq7wKSkK9RnmsCG2xVSLsflAR1S6eloWhawtF8yGJGskSJDBdQR8pIjZMXcfFmm1gOg2lRaSRdT1AD1PBPQbCAyxcRMifCpc41HEtILNbh9s8SSvYTUmBp2LDGOdCOB1OD0XbeByWliwY5bugc9nU2T4wqhCx7PNAV9bSGwARp3TzVaP0j09GQUzJubLUgefY3SEHMh63MVr4FIlYL+7C1AlCwAmxM+/plYy6hhgN2xp1HBawAr72krnH3uoicTaXyHx7uIwKZoT0QhUhszAAI7x7ivL0a60/jp77yyTFrWt6N6rxE99c7OkxdiBhC2y/cAorXHpama/aNG8dkOO32b6p3zTzXmeysfPu4LkkKafA3IrGjfCfPtuGfiPlfx+xBsuWtwpa3zIuy2YaoZ5o0eSQc5TVnb53aeeAuk9eBtRvkqUH0MoTsqA7nL429eFzeA3lyfQ08eaiNgCrjTYNozQ1S+WyUfQCosTLqZ+oiDUNwhggPujpZTuCMXGwUV6cJgKYnNIJffR3df2NLLZ5871puQrUR//pzpU7rOnAfJP53eDELrsoPpk4RIGRn5xqIBAAdBOCAoBjBjPJsJUdZSt9HSOGFrld5cn2M4KbwfkIUJzqYhQlYWdJ7YN2FrFQCY3nPsmk61AuSuRNYyUdaiRBk/7tViR37Zcir1JYC8WNshgjWWPfhq0dmzVx/5bhQAWnLKU1Md8gZHOsjxAgmD2GEKq4s6m1sxASQPu16HiBh53goqPg9ac0TEcwNQEOBlQAZEcMgC94dDZt2c7r8GMIH0H43ZRDC51RVCAAAAAElFTkSuQmCC">
-    <div class="brand-text"><strong>Open</strong>Shift</div>
-  </a>
-  <h1>
-    Welcome to OpenShift
-  </h1>
-  <p>
-    Place your application here
-  </p>
-  <p>
-    In order to commit to your new project, go to your projects git repo (created with the rhc app create command).  Make your changes, then run:
-  </p>
-  <pre>
-    git commit -a -m 'Some commit message'
-    git push
-  </pre>
-  <p>
-    Then reload this page.
-  </p>
-  
-  <h2>
-    What's next?
-  </h2>
-  <ul>
-    <li>
-      Why not visit us at <a href="http://openshift.redhat.com">http://openshift.redhat.com</a>, or
-    </li>
-    <li>
-      You could get help in the <a href="http://www.redhat.com/openshift">OpenShift forums</a>, or
-    </li>
-    <li>
-      You're welcome to come chat with us in our IRC channel at #openshift on freenode.net
-    </li>
-  </ul>
+
+	<a name="top"></a>
+
+
+
+
+
+	<div class="clsPageAlign">
+		<div class="clsLogo"><a href="ind.php"><img src="images/logo.png" alt="IIT Rajasthan Alumni Database"></img></a></div>
+<div id="flash" class="slideshow">
+	<img src="images/1.jpg" alt="1">
+</div>
+
+<div id="outerspace" onmouseover="javascript:pageScroll()" onmouseout="javascript:stopScroll()" style=" float:right;background-image: url('images/outerspace.jpg'); position: absolute; height: 1050px; left:940px; top:50px; width:190px; z-index:1">
+<div class="rocket" style="z-index: 4; position:absolute; left:0px; top:0px;">
+<img src="images/rocket.gif" width="92" height="215" alt="rocket animation" >
+</div>
+</div>
+
+<div id="sidebar">	
+<a href="chooseGallery.php" style="text-decoration: none; color:white; position:absolute; left:-50px; top:70px;" class="button" id="galleryButton"> Gallery </a>
+<a href="testimonial.php" style="text-decoration: none; color:white; position:absolute; left:90px; top:130px;" class="button" id="testimonialButton"> Testimonials </a>
+<a href="#" style="text-decoration: none; color:white; position:absolute; left:-50px; top:190px;" class="button" id="iitjhomeButton"> IITJ Home</a>
+<a href="#" style="text-decoration: none; color:white; position:absolute; left:90px; top:250px;" class="button" id="contactButton"> Contact us</a>
+</div>
+			<div id="weCreate">
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<a id="blink1" href="findFriends.php"><pre id="sbox">Search</pre></a> <a id="blink2" href="<?php if($logged=='y'){echo 'profile.php';} else{ echo 'login.php';}?>" ><pre id="slog"><?php if($logged=='y'){echo'Profile';} else{ echo 'Login';}?></pre></a> <a id="blink3" href="<?php if($logged=='y'){echo'logout.php';} else{ echo 'login.php';}?>" ><pre id="nlog"><?php if($logged=='y'){echo'Logout';} else{ echo 'New';}?></pre></a> 
+			
+			<br/><br/><br/><br/><br/><h2 style="position: relative; left:-90px;"> Stay Cool!</h2>
+   
+		 	</div>
+
+			<div class="clsForm"><br/>
+				<div id="share" style="position:absolute; left:42%;color: #111111">Events</div>
+				<br/><br/><br/>
+	<div id="mov" style="position: relative; left:190px; top:0px;">		
+	<marquee width=1000 height=100 direction=up scrolldelay="200"> There are no Events at the moment<br/><br/><br/>
+		There will be more events later on<br/><br/><br/>
+		Still developing site<br/> 
+		</marquee>
+	</div>
+			</div>
+
+<div id="footer" style="position: relative; left:0px; bottom:200px; height:2px;width:920px; z-index:1">
+				<hr/>
+	</div></div>
+
+<div style="background-color:rgb(55,19,20); opacity:.2; width:890px;position:relative; top:12px;left:14.5%;height:150px; width:920px;">
+<ul>
+<li></li>
+	<li><a href="ind.php" style="text-decoration: none; opacity:1;color: white;" >Home</a></li>
+<li><a href="ind.php" style="text-decoration: none; opacity:1;color: white;" >Contact us</a></li>
+<li><a href="ind.php" style="text-decoration: none; opacity:1;color: white;" >Credits</a></li>				
+	</ul>
+</div>
 </body>
+
 </html>
+
