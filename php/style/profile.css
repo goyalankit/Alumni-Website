@@ -1,0 +1,116 @@
+.clsPageAlign{
+	position:relative;
+	width:918px;
+	margin:49px auto 0 auto;
+}
+.clsLogo{
+	position:absolute;
+	left:0px;
+	top:0px;
+	height: 600px;
+	background-image:url('../images/profile/b1.jpg');
+opacity: 1;
+}
+.clsLogo #main{
+		
+		height:200px;
+		width:200px;
+border:5px solid black;
+margin:10px;
+}
+.clsLogo #search{
+	position:absolute;
+		top :340px;
+		left:120px;
+		height:50px;
+		width:50px;
+		opacity: .7;	
+}
+.clsLogo #search:hover{
+	opacity: 1;
+}
+
+.edit {
+	position:absolute;
+	top:410px;left:15px; width:200px; margin: 0 auto; background: #222; padding: 0px;
+	font-size: 22px; color: #555; text-shadow: 0px 2px 3px #171717;
+	text-align: center;
+	-webkit-box-shadow: 0px 2px 3px #555;
+	-moz-box-shadow: 0px 2px 3px #555;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.edit:hover {
+background: #FFFF99;
+}
+.logout {
+	position:absolute;
+	top:450px;left:15px; width:200px; margin: 0 auto; background: #222; padding: 0px;
+	font-size: 22px; color: #555; text-shadow: 0px 2px 3px #171717; text-align: center;
+	
+	-webkit-box-shadow: 0px 2px 3px #555;
+	-moz-box-shadow: 0px 2px 3px #555;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.logout:hover {
+background: #00FFFF;
+}
+.clsLogo #home{
+		position:absolute;
+		top :340px;
+		left:40px;
+		height:50px;
+		width:50px;
+		opacity: .7;
+}
+
+.clsLogo #home:hover{
+	opacity: 1;
+	
+}
+body{
+	background-image:url('../images/profile/b3.jpg');
+	background-attachment: fixed;
+	
+}
+.header{
+	background-image:url('../images/profile/b2.jpg');	
+	width:610px;
+	height:85px;
+	background-repeat:repeat-y;
+	position:absolute;
+	left: 250px
+}
+.basic{
+	font-size:60px ;
+	text-align: center;
+	font-family:"Lucida Grande";
+	text-shadow: 3px 3px 0 rgba(255,0,180,0.5);
+}
+.content{
+	font-size:20px ;
+	position:absolute;
+	left:0px;
+	width:600px;
+	top:90px;
+	font-family:"Lucida Grande";
+	background-image:url('../images/profile/b4.jpg');
+	background-repeat:repeat-y;
+}
+
+label{
+	font-weight: bolder;
+}
+.div_field{
+	margin:15px;
+}
+.mid_heading{
+	text-align: center;
+}
+.divider{
+	display:block;
+position: absolute;
+
+left:-20px;
+}

@@ -1,0 +1,379 @@
+html{
+	overflow:scroll;
+	overflow-x:hidden;
+}
+
+body{
+	margin:0;
+	text-align:left;
+	direction:ltr;
+	background:#000000  repeat-x center top;
+	height: 1200px;
+}
+
+img{
+	border:0 none;
+}
+
+#label_pass,#label_cpass,#label_desgnation1,#label_name, #label_roll, #label_address, #label_age, #label_dob, #label_rphone, #label_year, #label_MaritialStatus, #label_sex, #label_department, #label_email, #label_bloodgroup, #label_programme, #label_internship, #label_achievements, #label_cpi, #label_company, #label_jobdescription, #label_package, #label_UD1, #label_programme1, #label_uName1, #label_cName1{
+	
+  color: #000000;
+  display:block;
+  font-size:15px;
+  font-weight:bold;
+  text-align:right;
+  width:9em;
+  float:left;
+  margin-right:1em;
+  padding-right:0.5em;
+  position: absolute;
+  left:300px;
+}
+
+#subM{
+	position: absolute;
+	left:500px;
+	
+}
+
+#Res{
+	position: absolute;
+	left:600px;
+	
+	
+}
+
+.u_date{
+	position:absolute;
+	left:500px;
+	
+}
+#address,#address1{
+	
+	resize: none;
+}
+
+ #label_SNL{
+ 	
+ 	
+  color: #000000;
+  display:block;
+  font-size:15px;
+  font-weight:bold;
+  text-align:right;
+  width:9em;
+  float:left;
+  margin-right:1em;
+  padding-right:0.5em;
+  position: absolute;
+  left:280px;	
+ 	
+ }
+
+#div_pass,#div_cpass,#div_desgnation1,#div_cName1,#div_roll, #div_address, #div_age, #div_dob,#div_rphone, #div_year, #div_name. #div_MaritialStatus, #div_SNL, #div_sex, #div_department, #div_email, #div_bloodgroup, #div_programme, #div_internship, #div_achievements, #div_cpi, #div_company, #div_jobdescription, #div_package, #div_programme, #div_programme1, #div_UD1, #div_uName1{
+  margin-bottom: 1.5em;
+}
+
+.sexf{
+	
+	position: absolute;
+  left:570px;	
+}
+.lsexm{
+	position: absolute;
+  left:500px;
+}
+.sexm{
+	position: absolute;
+  left:520px;		
+}
+.lsexf{
+	position: absolute;
+  left:550px;
+}
+
+.uname,.prog,#pass1,#cpass,#roll,#name, #address, #age, #dob, #rphone, #year, #MaritialStatus, #SNL, #department, #email, #bloodgroup, #programme, #internship, #achievements, #cpi, #company, #jobdescription, #package, #programme, #yeardropdown1, #uName1, #programme1{
+	
+	position: absolute;
+	left: 500px;
+}
+
+.yeardropdown{
+	position: absolute;
+	left: 565px;	
+}
+.monthdropdown{
+	position: absolute;
+	left: 500px;
+}
+#address1{
+	position: absolute;
+	left: 270px;
+}
+
+.dobpicker{
+	position: absolute;
+	left: 660px;
+	
+}
+
+A:link, A:visited, A:active{color:#00ffff; font-style:italic; text-decoration:underline; font-weight:500; background-color:transparent;}
+A:hover{text-decoration:underline;}
+
+.clsSpacer{
+	clear:both;
+	height:0;
+	font-size:0;
+	background-color:transparent;
+}
+
+.clsLink{
+	cursor:pointer;
+
+}
+
+.clsErrorMsg{
+	color:red;
+	font-size:13px;
+	font-weight:800;
+	text-align:center;
+	padding:15px;
+}
+
+.clsPageAlign{
+	position:relative;
+	width:918px;
+	margin:49px auto 0 auto;
+	height:1200px;
+}
+
+.clsLogo{
+	position:absolute;
+	left:6px;
+	top:0;
+	z-index: 1000;
+}
+
+.clsMainContent{
+	width:684px;
+	padding:5px 0 0 0;
+	margin:0 0 0 235px;
+	background:url(../images/top.gif) no-repeat 33px 0;
+}
+
+.clsMainContent h1{
+	color:#000000;
+	font-size:15px;
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:800;
+	text-align:center;
+	margin:0 0 23px 0;
+}
+
+.clsGrayBG{
+	width:684px;
+	background:url(../images/gray_bg.png) repeat-y 33px;
+}
+.clsGrayBG1{
+	width:684px;
+	background:url(../images/gray_bg.png) repeat-y 33px;
+}
+
+
+.clsTitleBG1{
+	background:url(../images/title1_bg.png) no-repeat 0 464px; 
+}
+
+.clsTitleBG2{
+	background:url(../images/title2_bg.png) no-repeat 0 1426px; 
+}
+
+.clsContentText{
+	width:618px;
+	width:458px;
+	color:#545454;
+	font-size:17px;
+	font-family:Georgia;
+	line-height:25px;
+	padding:26px 80px 30px 80px;
+	padding:26px 113px 30px 113px;
+}
+
+.clsIpad{
+	text-align:center;
+	padding-bottom:40px;
+}
+
+
+.clsLine{
+	width:615px;
+	height:2px;
+	font-size:1px;	
+	margin:auto;
+	background:#e8e8e8;
+}
+
+#queryBox{
+	
+	position: absolute;
+	left:265px;
+	
+}
+
+.clsForm{
+	height:410px;
+	width:640px;
+	color:#bbbdc1;
+	font-size:17px;
+	font-family:Georgia;
+	font-weight:500;
+	line-height:25px;
+	padding:0 80px 0 80px;
+	margin:auto;
+	background:url(../images/title3_bg.png) no-repeat center top;
+	position: relative;
+	top:-190px;
+	left:135px;
+}
+
+.clsForm h1{
+	height:67px;
+	color:#ffffff;
+	font-size:25px;
+	font-family:Georgia;
+	font-weight:500;
+	padding-top:38px;
+	margin:0 0 34px 0;
+}
+
+.clsForm h1 span{
+	color:#6e7683;
+}
+
+.clsForm form{
+	text-align:center;
+	margin:30px 0 0 0;
+}
+
+.clsForm input.clsField{
+	width:495px;
+	height:47px;
+	color:#ffffff;
+	font-size:23px;
+	font-family:Georgia;
+	font-weight:500;
+	line-height:43px;
+	vertical-align:middle;
+	padding:0 0 0 12px;
+	border:0 none;
+	background:url(../images/input_bg.png) no-repeat center top;
+}
+
+.clsForm input.clsField2{
+	width:495px;
+	height:39px;
+	color:#ffffff;
+	font-size:23px;
+	font-family:Georgia;
+	font-weight:500;
+	line-height:43px;
+	vertical-align:middle;
+	padding:8px 0 0 12px;
+	border:0 none;
+	background:url(../images/input_bg.png) no-repeat center top;
+}
+
+.clsFormButtons{
+	text-align:center;
+	margin:22px 0 0 0;
+}
+
+.clsFormMessage{
+	display:none;
+	color:#00ffff;
+	font-size:15px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight:800;
+	text-align:center;
+	margin:22px 0 0 0;
+}
+
+.clsFooter{
+	width:682px;
+	color:#ffffff;
+	font-size:17px;
+	font-family:Georgia;
+	line-height:25px;
+	text-align:center;
+	margin:auto;
+	
+}
+
+.clsBullet{
+	text-align:center;
+	padding:28px 0 18px 0;
+}
+
+
+	#tiltshadows {
+       width: 220px;
+       height:100px;
+       margin: 1em auto;
+       position: relative;
+       z-index: 3;
+       text-align: center;
+}  
+
+article  {
+       background: #749194;
+       -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+       border-radius: 20px;
+       padding: 10px;
+       color: #695539;
+       text-shadow: 0 1px 0 #ffffff;
+       line-height: 1.7em;
+       text-align: center;
+       display: block;
+}
+
+article:before, article:after  {
+       -webkit-box-shadow: 0 15px 10px rgba(0,0,0, .7);
+       -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+       box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+       position: absolute;
+       bottom: 15px;
+       z-index: -1;
+       width: 50%;
+       height: 20%;
+       content: "";
+       background: rgb(0, 0, 0);
+}
+
+article:after  {
+       -webkit-transform: rotate(3deg);
+       -moz-transform: rotate(3deg);
+       -o-transform: rotate(3deg);
+       right: 10px;
+       left: auto;
+}
+
+article:before  {
+       -webkit-transform: rotate(-3deg);
+       -moz-transform: rotate(-3deg);
+       -o-transform: rotate(-3deg);
+       right: auto;
+       left: 10px;
+}						  
+
+
+#footer{
+	text-align:right;
+	margin: 10px;
+	background-image:url('../images/profile/b3.jpg');
+	
+}
+
+#footer a{
+	margin-right: 20px;
+}

@@ -1,0 +1,289 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+
+
+<html>
+
+
+
+<head>
+
+<script language="javascript" type="text/javascript" src="script/datetimepicker.js">
+</script>
+<script language="javascript" type="text/javascript" src="script/validateReg.js">
+</script>	
+
+	<link type="text/css" rel="stylesheet" href="style/general.css" /> 
+
+	<script type="text/javascript" src="script/general.js"></script>
+
+	
+
+	<title>IIT Rajasthan Alumni Database</title>
+
+	<meta name="description" content="" />
+</head>
+
+<body>
+
+
+<form action="data1.php" method="post" enctype="multipart/form-data">
+	<a name="top"></a>
+
+	
+
+	<div class="clsPageAlign">
+
+
+
+				<div class="clsLogo"><a href="ind.html"><img src="images/logo.png" alt="IIT Rajasthan Alumni Database"></img></a></div>
+
+
+		<div class="clsMainContent">
+
+			<div class="clsGrayBG">
+
+				
+
+				<div class="clsContentText">
+
+					<h1>New Record Information</h1>
+				
+				
+				 <div id="div_name">  
+               <label id="label_name" for="name">Name: </label>
+        		<input id="name" type="text" name="name"/>
+        </div><br/>
+            	
+            	 <div id="div_roll">  
+               <label id="label_roll" for="roll">Roll Number: </label><label id="label_sug" style="position:absolute; left:660px" for="roll">(will be your username) </label>
+        		<input id="roll" type="text" name="roll"  onkeyup="javascript: this.value= this.value.toUpperCase();" onchange="javascript: alert('please re-check your roll number');"/>
+            	 </div><br/>
+            	
+            	 <div id="div_pass">  
+               <label id="label_pass" for="pass1">Password: </label>
+        		<input id="pass1" type="password" name="pass"/>
+            	 </div><br/>
+            	
+            	<div id="div_cpass">  
+               <label id="label_cpass" for="cpass">Conf. Password: </label>
+        		<input id="cpass" type="password" name="cpass"/>
+            	 </div><br/>
+            	
+            	 <div id="div_dob">  
+               <label id="label_dob" for="name">Date of Birth: </label>
+        		<input id="dob" type="text" name="dob" readonly="readonly"/><a class="dobpicker" href="javascript:NewCal('dob','ddmmyyyy')"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a>
+          </div><br/>
+          
+          
+                      
+           <div id="div_rphone">  
+               <label id="label_rphone" for="rphone" >Contact Number: </label>
+        		<input id="rphone" type="text" name="rphone" onfocusout='checknumber(rphone)'/>
+          </div><br/> 
+				
+			<div id="div_address">  
+               <label id="label_address" for="address">Permanent Address: </label>
+        		<textarea id="address" cols="25" rows="3" name="address"></textarea>
+          </div><br/><br/><br/>	
+			
+			<div id="div_address">  
+               <label id="label_address" for="address">Current Address: </label>
+        		<textarea id="address" cols="25" rows="3" name="Caddress"></textarea>
+          </div><br/><br/><br/>
+				
+			<div id="div_sex">  
+               <label id="label_sex" for="address">Sex: </label>
+        		<label class="lsexm">M</label><input class="sexm" id="sexm" type="radio"  name="sex" value="M"/>
+        		<label class="lsexf">F</label><input id="sexf" class="sexf" type="radio"  name="sex" value="F"/>
+          </div><br/>	
+			
+				
+			<div id="div_MaritialStatus">  
+               <label id="label_MaritialStatus" for="MaritialStatus">Maritial Status: </label>
+        		<select name="MaritialStatus" id="MaritialStatus" class="MaritialStatus">
+        			<option>Choose one..</option>
+        			<option>Bachelor</option>
+        			<option>Married</option>
+        			<option>Divorced</option>
+        			<option>Separated</option>
+        			<option>Prefer not to say</option>
+        		</select><br/>
+          </div><br/>	
+			
+          
+          	<div id="div_email">  
+               <label id="label_email" for="email">Email: </label>
+        		<input id="email" type="text" name="email"/>
+          </div><br/>
+          
+          <div id="div_bloodgroup">  
+               <label id="label_bloodgroup" for="bloodgroup">Blood Group: </label>
+        			<select name="bloodgroup" id="bloodgroup" class="bloodgroup">
+        			<option>Choose one..</option>
+        			<option>A +ve</option><option>A -ve</option><option>B +ve</option><option>B -ve</option><option>AB +ve</option><option>AB -ve</option><option>O +ve</option><option>O -ve</option>
+        			
+        		</select>
+          </div><br/>
+                    	<div id="div_email">  
+
+          <label for="file" id="label_file">Profile Pic:</label>
+			<input type="file" name="file" id="file" class="file" /> 
+</div>
+          <h2>Academics</h2><hr/>
+          
+          <div id="div_department">  
+               <label id="label_department" for="department">Department: </label>
+        		<select name="department" id="department" class="department">
+        			<option>Choose one..</option>
+        			<option value="Computer Science and Engineering">CSE</option><option value="Electrical Engineering">EE</option><option value="Mechanical Engineering">ME</option><option>Control Systems</option>
+        		</select>
+          </div><br/>
+          
+          <div id="div_programme">  
+               <label id="label_programme" for="programme">Programme: </label>
+        		<select name="programme" id="programme" class="programme">
+        			<option>Choose one..</option>
+        			<option value="Bachelor of Technology">B.Tech</option><option value="Master of Technology">M.Tech</option><option value="Doctor of Philosophy(ph.d)">Ph.d</option>
+        		</select>
+          </div><br/>
+          
+           <div id="div_year">  
+               <label id="label_year" for="year">Passout Year: </label>
+               <select name="pass_year" id="year" class="yeardropdown">
+               	<option>choose one..</option><option>2012</option><option>2013</option><option>2014</option><option>2015</option>
+               	<option>2016</option><option>2017</option><option>2018</option><option>2019</option><option>2020</option>
+               	<option>2021</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option>
+               	<option>2026</option><option>2027</option><option>2028</option><option>2029</option><option>2030</option>
+               	<option>2031</option><option>2032</option><option>2033</option><option>2034</option><option>2035</option>
+               </select><br/>
+        		
+          </div><br/>
+          
+          
+          <div id="div_internship">  
+               <label id="label_internship" for="internship">Internship: </label>
+        		<textarea id="internship" cols="25" rows="3" name="internship"></textarea>
+          </div><br/><br/><br/>
+          
+          <div id="div_achievements">  
+               <label id="label_achievements" for="achievements">Achievements: </label>
+        		<textarea id="achievements" cols="25" rows="3" name="achievements"></textarea>
+          </div><br/><br/><br/>				
+				
+			<div id="div_cpi">  
+               <label id="label_cpi" for="cpi">CPI: </label>
+        		<input id="cpi" type="text" name="cpi"/>
+          </div><br/>
+          
+          
+<script type="text/javascript">
+function addMore(num){
+	num++;
+	num1=num+1;
+	var s_d='s_date'+num;
+	var ddmmyy='ddmmyyyy';
+	var e_d='e_date'+num;
+	document.getElementById('detail'+num).innerHTML=' <label id="label_UD1" for="UD1">Start Date: </label><input id="s_date'+num+'" class="u_date" type="text" name="s_date'+num+'"/><a class="dobpicker" href="javascript:NewCal(\''+s_d+'\',\''+ddmmyy+'\')"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a><br/><label id="label_UD1" for="UD1">End Date: </label><input id="e_date'+num+'" class="u_date" type="text" name="e_date'+num+'"/><a class="dobpicker" href="javascript:NewCal(\''+e_d+'\',\''+ddmmyy+'\')"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a><br/></div><div id="div_uName1">  <label id="label_uName1" for="uName1">University: </label><input class="uname" id="uName'+num+'" type="text" name="uName'+num+'"/></div><br/><div id="div_programme1">  <label id="label_programme1" for="programme1">Programme: </label><input class="prog" id="programme'+num+'" type="text" name="programme'+num+'"/></div><br/><hr/><div id="detail'+num1+'"></div>';
+	document.getElementById('addmore').innerHTML='<button type="button" onclick="addMore('+ num +')">Add even more</button>';
+}
+
+
+</script>          	
+        <div id="univ_details">  
+        <h2>University</h2>
+         
+         <div id="div_UD1">
+         	<legend> University Details </legend>
+         	<hr /> 
+         	 
+         	
+         	 
+               <label id="label_UD1" for="UD1">Start Date: </label><input readonly="readonly" id="s_date1" class="u_date" type="text" name="s_date1"/><a class="dobpicker" href="javascript:NewCal('s_date1','ddmmyyyy')"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a><br/>
+        		<label id="label_UD1" for="UD1">End Date: </label><input id="e_date1" class="u_date" type="text" readonly="readonly" name="e_date1"/><a class="dobpicker" href="javascript:NewCal('e_date1','ddmmyyyy')"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a><br/>
+          </div>
+          <div id="div_uName1">  
+               <label  id="label_uName1" for="uName1">University: </label>
+        		<input class="uname" id="uName1" type="text" name="uName1"/>
+          </div><br/>
+			<div id="div_programme1">  
+               <label id="label_programme1" for="programme1">Programme: </label>
+        		<input class="prog" id="programme1" type="text" name="programme1"/>
+          </div><br/>
+	<hr/>
+	<div id="detail2"></div>
+		<div id="addmore"><button type="button" onclick="addMore(1)">Add more</button></div> 
+          </div>
+          
+
+
+
+
+        <div id="prof_details">  
+        <h2>Profession</h2>
+         
+         <div id="div_PD1">
+         	<legend> Professional Details </legend>
+         	<hr />  
+                <label id="label_UD1" for="UD1">Start Date: </label><input id="ps_date1" class="u_date" readonly="readonly" type="text" name="ps_date1"/><a class="dobpicker" href="javascript:NewCal('ps_date1','ddmmyyyy')"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a><br/>
+        		<label id="label_UD1" for="UD1">End Date: </label><input id="pe_date1" class="u_date" type="text" readonly="readonly" name="pe_date1"/><a class="dobpicker" href="javascript:NewCal('pe_date1','ddmmyyyy')"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a><br/>
+          </div>
+          <div id="div_cName1">  
+               <label  id="label_cName1" for="cName1">Company: </label>
+        		<input class="uname" id="cName1" type="text" name="cName1"/>
+          </div><br/>
+			<div id="div_desgnation1">  
+               <label id="label_desgnation1" for="desgnation1">Desgnation: </label>
+        		<input class="prog" id="desgnation1" type="text" name="desgnation1"/>
+          </div><br/>
+                <div id="div_cName1">  
+               <label  id="label_cName1" for="cName1">Work Place: </label>
+        		<input class="uname" id="cName1" type="text" name="wPlace1"/>
+          </div><br/>
+	
+	<hr/>
+	<div id="moreProf2"></div>
+	
+	
+		<div id="addmore2"><button type="button" onclick="addMoreProf(1)">Add more</button></div> 
+          </div>
+<script type="text/javascript">          
+function addMoreProf(num){
+	num++;
+	num1=num+1;
+	var s_d='ps_date'+num;
+	var e_d='pe_date'+num;
+	var ddmmyy='ddmmyyyy';
+	document.getElementById('moreProf'+num).innerHTML='  <label id="label_UD1" for="UD1">Start Date: </label><input id="ps_date'+num+'" class="u_date" type="text" name="ps_date'+num+'"/><a class="dobpicker" href="javascript:NewCal(\''+s_d+'\',\''+ddmmyy+'\')"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a><br/><label id="label_UD1" for="UD1">End Date: </label><input id="pe_date'+num+'" class="u_date" type="text" name="pe_date'+num+'"/><a class="dobpicker" href="javascript:NewCal(\''+e_d+'\',\''+ddmmyy+'\')"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a><br/></div><div id="div_cName1">  <label  id="label_cName1" for="cName1">Company: </label><input class="uname" id="cName'+num+'" type="text" name="cName'+num+'"/></div><br/><div id="div_desgnation1">  <label id="label_desgnation1" for="desgnation1">Desgnation: </label><input class="prog" id="desgnation'+num+'" type="text" name="desgnation'+num+'"/></div><br/><div id="div_cName1">  <label  id="label_cName1" for="cName1">Work Place: </label><input class="uname" id="cName'+num+'" type="text" name="wPlace'+num+'"/></div><br/>	<hr/><div id="moreProf'+num1+'"></div>	<div id="addmore">'
+	document.getElementById('addmore2').innerHTML='<button type="button" onclick="addMoreProf('+num+')">Add more</button></div> ';
+}
+
+</script> 
+          <h1>Placement</h1>
+          
+          <div id="div_company">  
+               <label id="label_company" for="company">Company: </label>
+        		<input id="company" type="text" name="company"/>
+          </div><br/>
+          
+          <div id="div_jobdescription">  
+               <label id="label_jobdescription" for="jobdescription">Job Description: </label>
+        		<input id="jobdescription" type="text" name="jobdescription"/>
+          </div><br/>
+          
+          <div id="div_package">  
+               <label id="label_package" for="package">Package: </label>
+        		<input id="package" type="text" name="package"/>
+          </div><br/><br/>
+          <button id="subM" type="submit" value="Submit"> Add Record </button><button id="Res" type="reset" value="Submit"> Reset </button>  	
+				</div>
+
+				</div>	
+			
+</form>
+
+				</body>
+
+</html>
+
