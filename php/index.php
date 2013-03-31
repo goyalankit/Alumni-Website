@@ -243,7 +243,7 @@ function stopScroll() {
 <div id="sidebar">	
 <a href="chooseGallery.php" style="text-decoration: none; color:white; position:absolute; left:-50px; top:70px;" class="button" id="galleryButton"> Gallery </a>
 <a href="testimonial.php" style="text-decoration: none; color:white; position:absolute; left:90px; top:130px;" class="button" id="testimonialButton"> Testimonials </a>
-<a href="#" style="text-decoration: none; color:white; position:absolute; left:-50px; top:190px;" class="button" id="iitjhomeButton"> IITJ Home</a>
+<a href="https://github.com/goyalankit/Alumni-Website" style="text-decoration: none; color:white; position:absolute; left:-50px; top:190px;" class="button" id="iitjhomeButton"> Source Code</a>
 <a href="#" style="text-decoration: none; color:white; position:absolute; left:90px; top:250px;" class="button" id="contactButton"> Contact us</a>
 </div>
 			<div id="weCreate">
