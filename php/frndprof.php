@@ -26,7 +26,7 @@ else{
 </head>
 <body>
 	<div class="clsPageAlign">
-		<div class="clsLogo"><a href="ind.php"><img id="main" style="opacity: 1.0;" src="images/aa.jpg" alt="IIT Rajasthan Alumni Database"/></a>
+		<div class="clsLogo"><a href="index.php"><img id="main" style="opacity: 1.0;" src="images/aa.jpg" alt="IIT Rajasthan Alumni Database"/></a>
 					<div id="contact_details" style="border:solid; background: white;">
 			<div class="div_field">
 				<label id="email">Email:  </label>  <?php echo $details['0']['email'];?>
@@ -36,7 +36,7 @@ else{
 			</div>
 			</div>
 	
-			<a href="ind.php"><img id="home" src="images/onebit_01.png" alt="IIT Rajasthan Alumni Database"/></a>
+			<a href="index.php"><img id="home" src="images/onebit_01.png" alt="IIT Rajasthan Alumni Database"/></a>
 			<a href="search.php"><img id="search" src="images/onebit_02.png" alt="IIT Rajasthan Alumni Database"/></a>
 			<pre class="edit " id="edit"><a style="text-decoration: none;color:white; 	" href="profile.php">My profile</a></pre>
 			<pre class="logout" id="logout"><a style="text-decoration: none;color:white; 	" href="logout.php">Logout</a></pre>

@@ -118,7 +118,7 @@ $success = $sth->execute();
 $i++;
 }     
    if($success){
-//		header("Location:ind.php");
+//		header("Location:index.php");
      echo "the new entry has been added";
      echo "\n";
         }else{

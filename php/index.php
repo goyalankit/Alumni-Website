@@ -229,7 +229,7 @@ function stopScroll() {
 
 
 	<div class="clsPageAlign">
-		<div class="clsLogo"><a href="ind.php"><img src="images/logo.png" alt="IIT Rajasthan Alumni Database"></img></a></div>
+		<div class="clsLogo"><a href="http://goyalankit.com/labs"><img src="images/logo.png" alt="IIT Rajasthan Alumni Database"></img></a></div>
 <div id="flash" class="slideshow">
 	<img src="images/1.jpg" alt="1">
 </div>
@@ -272,9 +272,9 @@ function stopScroll() {
 <div style="background-color:rgb(55,19,20); opacity:.2; width:890px;position:relative; top:12px;left:14.5%;height:150px; width:920px;">
 <ul>
 <li></li>
-	<li><a href="ind.php" style="text-decoration: none; opacity:1;color: white;" >Home</a></li>
-<li><a href="ind.php" style="text-decoration: none; opacity:1;color: white;" >Contact us</a></li>
-<li><a href="ind.php" style="text-decoration: none; opacity:1;color: white;" >Credits</a></li>				
+	<li><a href="index.php" style="text-decoration: none; opacity:1;color: white;" >Home</a></li>
+<li><a href="index.php" style="text-decoration: none; opacity:1;color: white;" >Contact us</a></li>
+<li><a href="index.php" style="text-decoration: none; opacity:1;color: white;" >Credits</a></li>				
 	</ul>
 </div>
 </body>

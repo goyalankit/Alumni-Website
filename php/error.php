@@ -58,7 +58,7 @@ h1 {
 
 <body>
 	<div class="clsPageAlign">
-		<div class="clsLogo"><a href="ind.php"><img src="images/logo.png" alt="IIT Rajasthan Alumni Database"></img></a></div>
+		<div class="clsLogo"><a href="index.php"><img src="images/logo.png" alt="IIT Rajasthan Alumni Database"></img></a></div>
 	
 		<div id="weCreate">
 			<div id="banner">
