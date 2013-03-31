@@ -1,10 +1,11 @@
 <?php
 //insert
 //insert
-  $hostname='localhost';
-  $username='root';
-  $password='MyNewPass';
-  $database='website';
+  $hostname=$OPENSHIFT_MYSQL_DB_HOST;
+  $port=$OPENSHIFT_MYSQL_DB_PORT;
+  $username='adminX8efWX5';
+  $password='v4Z1h8Kcp5QI';
+  $database='alumweb';
   $connString = "mysql:host=$hostname;dbname=website";
 try{
       
